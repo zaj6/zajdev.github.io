@@ -99,3 +99,33 @@ window.onload = function() {
     css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
     document.body.appendChild(css);
 };
+
+// -------------------- Fun stuff
+
+const konamiCode = [
+  "ArrowUp",
+  "ArrowUp",
+  "ArrowDown",
+  "ArrowDown",
+  "ArrowLeft",
+  "ArrowRight",
+  "ArrowLeft",
+  "ArrowRight",
+  "KeyB",
+  "KeyA",
+  "Enter"
+];
+
+let konamiCodeIndex = 0;
+
+document.addEventListener("keydown", event => {
+  if (event.code === konamiCode[konamiCodeIndex]) {
+    konamiCodeIndex++;
+  } else {
+    konamiCodeIndex = 0;
+  }
+
+  if (konamiCodeIndex === konamiCode.length) {
+    window.location.href = "https://en.wikipedia.org/wiki/Konami_Code";
+  }
+});

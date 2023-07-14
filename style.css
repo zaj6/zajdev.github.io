@@ -17,9 +17,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-main {
-    margin-left: 0px;
-}
+/* main {
+    margin: auto;
+} */
 
 header {
     background-color: #12121200;
@@ -49,23 +49,38 @@ text-align: center;
     }
 
 #welcome-content {
-    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+    margin-bottom: 17.8%;
 }
 
-#welcome-text{
-    font-size:50px;
+#welcome-text {
+    font-size: 50px;
     text-align: center;
-    
+    margin-bottom: 20px;
+}
+
+#welcome-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%; 
+}
+
+#welcome-profile-pic {
+    margin-right: 20px; 
+}
+
+#welcome-description {
+    width: 20%; 
 }
 
 #navbar {
-    margin-top: 5%;
-}
-
-#short-description {
-    align-items: center;
-    margin: auto;
-    width: 80%;
+    margin-top: 3%;
 }
 
 .ball {
@@ -73,3 +88,18 @@ text-align: center;
     border-radius: 100%;
     opacity: 0.7;
   }
+
+  .circle-image {
+    border: 3px solid azure;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 200px;
+    height: 200px;
+}
+
+.circle-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
