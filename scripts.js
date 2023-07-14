@@ -94,11 +94,27 @@ window.onload = function() {
           new TxtType(elements[i], JSON.parse(toRotate), period);
         }
     }
-    // INJECT CSS
+
     var css = document.createElement("style");
     css.type = "text/css";
-    css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
-    document.body.appendChild(css);
+    css.innerHTML = `
+        @keyframes border-flash {
+          0% {
+            border-right-color: #fff;
+          }
+          50% {
+            border-right-color: transparent;
+          }
+          100% {
+            border-right-color: #fff;
+          }
+        }
+
+        .typewrite > .wrap {
+          border-right: 0.08em solid #fff;
+          animation: border-flash 1s infinite;
+        }`;
+document.body.appendChild(css);
 };
 
 // -------------------- Fun stuff
