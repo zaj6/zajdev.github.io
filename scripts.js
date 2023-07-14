@@ -13,6 +13,7 @@ for (let i = 0; i < numBalls; i++) {
   ball.style.transform = `scale(${Math.random()})`;
   ball.style.width = `${Math.random()}em`;
   ball.style.height = ball.style.width;
+  ball.style.zIndex = "-1";
   
   balls.push(ball);
   document.body.append(ball);
@@ -126,6 +127,6 @@ document.addEventListener("keydown", event => {
   }
 
   if (konamiCodeIndex === konamiCode.length) {
-    window.location.href = "https://en.wikipedia.org/wiki/Konami_Code";
+    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
   }
 });
